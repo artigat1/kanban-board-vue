@@ -1,23 +1,35 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+
+    <div class="page-header">
+      <h1>Kanban Board</h1>
+      <p class="lead">An example of a Kanban board, written in Vue.js</p>
+    </div>
+
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+    name: 'app',
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .page-header h1 {
+    font-weight: 300;
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+
+  .card:last-child {
+    margin-bottom: 25px;
+  }
+
+  .card-block {
+    padding: 15px;
+  }
 </style>

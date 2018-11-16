@@ -3,11 +3,21 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+/* eslint-disable no-param-reassign */
 export default new Vuex.Store({
     state: {
         items: {
             todo: [],
         },
         nextId: 1,
+    },
+    mutations: {
+        addItem(state, item) {
+            state.items.todo.push({
+                ...item,
+                id: state.nextId,
+            });
+            state.nextId += 1;
+        },
     },
 });

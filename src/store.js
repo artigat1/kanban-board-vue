@@ -21,5 +21,8 @@ export default new Vuex.Store({
             });
             state.nextId += 1;
         },
+        updateItems(state, { items, id }) {
+            state.items[id] = items;
+        },
     },
 });
